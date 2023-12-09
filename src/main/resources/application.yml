@@ -1,0 +1,33 @@
+server:
+  port: 8287
+  
+spring:
+  application:
+    name: ORDER-SERVICE
+  datasource:
+    url: jdbc:h2:mem:order_details
+    driver-class-name: org.h2.Driver
+    username: dadaso
+    password: dadaso@123
+  h2:
+    console:
+      enabled: true  
+      
+logging:
+  file:
+    name: C:/Dadaso/microservices/logs/microservices.log
+  level:
+    enabled: DEBUG
+  pattern: 
+      file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level  %looger{36} - %msg%n"
+      
+spring-jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        
+Spring-3pa:
+     hibernate:
+          ddl-auto: update
+  
+eureka:
+   instance:
+       hostname: localhost
